@@ -1,6 +1,6 @@
-extends Area2D
+extends KinematicBody2D
 
-export var walkSpeed = 10;
+export var walkSpeed = 50;
 var direction = Vector2();
 var facingDirection = 0; 
 
@@ -15,13 +15,13 @@ func _process(delta):
 	
 
 func checkForDirections():
-	if(Input.is_action_just_pressed("right")):
+	if(Input.is_action_pressed("right")):
 		direction.x += 1;
-	if(Input.is_action_just_pressed("left")):
+	if(Input.is_action_pressed("left")):
 		direction.x -= 1;
-	if(Input.is_action_just_pressed("up")):
+	if(Input.is_action_pressed("up")):
 		direction.y -= 1;
-	if(Input.is_action_just_pressed("down")):
+	if(Input.is_action_pressed("down")):
 		direction.y += 1;
 
 func updateWalkSprites():
@@ -39,7 +39,7 @@ func updateWalkSprites():
 		elif(direction.x < 0):
 			$AnimatedSprite.play("Player_Walk_Left");
 			facingDirection = 3;
-	else:
+	if(direction.x == 0 && direction.y == 0):
 		updateIdleSprites();
 
 func updateIdleSprites():
