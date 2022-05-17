@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/BlueFlower_00038.png-949927aff3f68772cecc92ab948b101a.stex"
+path="res://.import/BlueFlower_00038.png-a3d5ac217a6b57460febf86a960d7ca5.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Plant Animations/BlueFlower2/BlueFlower1/BlueFlower_00038.png"
-dest_files=[ "res://.import/BlueFlower_00038.png-949927aff3f68772cecc92ab948b101a.stex" ]
+source_file="res://assets/assets-plataforma/Plataforma 1 - Plant Animations/BlueFlower2/BlueFlower1/BlueFlower_00038.png"
+dest_files=[ "res://.import/BlueFlower_00038.png-a3d5ac217a6b57460febf86a960d7ca5.stex" ]
 
 [params]
 

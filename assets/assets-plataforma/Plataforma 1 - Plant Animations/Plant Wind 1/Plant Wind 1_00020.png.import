@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Plant Wind 1_00020.png-bbc22dc580f7499970af5f77667ad62a.stex"
+path="res://.import/Plant Wind 1_00020.png-6489b89ebd485970bd595c466e94d553.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Plant Animations/Plant Wind 1/Plant Wind 1_00020.png"
-dest_files=[ "res://.import/Plant Wind 1_00020.png-bbc22dc580f7499970af5f77667ad62a.stex" ]
+source_file="res://assets/assets-plataforma/Plataforma 1 - Plant Animations/Plant Wind 1/Plant Wind 1_00020.png"
+dest_files=[ "res://.import/Plant Wind 1_00020.png-6489b89ebd485970bd595c466e94d553.stex" ]
 
 [params]
 

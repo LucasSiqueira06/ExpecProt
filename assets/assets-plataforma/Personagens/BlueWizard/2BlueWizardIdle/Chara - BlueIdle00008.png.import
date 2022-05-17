@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Chara - BlueIdle00008.png-0b67922fcbdf072a0bb38d0b29358a3b.stex"
+path="res://.import/Chara - BlueIdle00008.png-b4e2a8117ca48e57a4fc9dc66f41a5fc.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://BlueWizard/2BlueWizardIdle/Chara - BlueIdle00008.png"
-dest_files=[ "res://.import/Chara - BlueIdle00008.png-0b67922fcbdf072a0bb38d0b29358a3b.stex" ]
+source_file="res://assets/assets-plataforma/Personagens/BlueWizard/2BlueWizardIdle/Chara - BlueIdle00008.png"
+dest_files=[ "res://.import/Chara - BlueIdle00008.png-b4e2a8117ca48e57a4fc9dc66f41a5fc.stex" ]
 
 [params]
 

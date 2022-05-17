@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/top_far_bgrnd.png-7c977ced1957b1fd2ff3bc7f9726fe9e.stex"
+path="res://.import/top_far_bgrnd.png-fae4947ccb4298bba20a1d68f527bccf.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Dark Forest/top_far_bgrnd.png"
-dest_files=[ "res://.import/top_far_bgrnd.png-7c977ced1957b1fd2ff3bc7f9726fe9e.stex" ]
+source_file="res://assets/assets-plataforma/Plataforma 2 - Dark Forest/top_far_bgrnd.png"
+dest_files=[ "res://.import/top_far_bgrnd.png-fae4947ccb4298bba20a1d68f527bccf.stex" ]
 
 [params]
 

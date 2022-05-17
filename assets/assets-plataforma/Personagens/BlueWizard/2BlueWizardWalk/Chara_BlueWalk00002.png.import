@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Chara_BlueWalk00002.png-232716a1793a419301ea524c16503370.stex"
+path="res://.import/Chara_BlueWalk00002.png-5748a4d747ee6e64091c24602bd42d8a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://BlueWizard/2BlueWizardWalk/Chara_BlueWalk00002.png"
-dest_files=[ "res://.import/Chara_BlueWalk00002.png-232716a1793a419301ea524c16503370.stex" ]
+source_file="res://assets/assets-plataforma/Personagens/BlueWizard/2BlueWizardWalk/Chara_BlueWalk00002.png"
+dest_files=[ "res://.import/Chara_BlueWalk00002.png-5748a4d747ee6e64091c24602bd42d8a.stex" ]
 
 [params]
 

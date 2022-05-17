@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Foggy Woods.mp3-6e30760727d86fb8a96823bedf3f8ec3.mp3str"
+
+[deps]
+
+source_file="res://assets/assets-top-down/Personagens/generic-rpg-pack_v0.4_(alpha-release)_vacaroxa/rpg-pack/soundtrack/Foggy Woods.mp3"
+dest_files=[ "res://.import/Foggy Woods.mp3-6e30760727d86fb8a96823bedf3f8ec3.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

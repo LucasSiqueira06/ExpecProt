@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/CharaWizardJump_00004.png-cc8af793df48ac81aa89dfcd9a5cfb7f.stex"
+path="res://.import/CharaWizardJump_00004.png-6fd7ada478ff2baff394355b5cdd342f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://BlueWizard/2BlueWizardJump/CharaWizardJump_00004.png"
-dest_files=[ "res://.import/CharaWizardJump_00004.png-cc8af793df48ac81aa89dfcd9a5cfb7f.stex" ]
+source_file="res://assets/assets-plataforma/Personagens/BlueWizard/2BlueWizardJump/CharaWizardJump_00004.png"
+dest_files=[ "res://.import/CharaWizardJump_00004.png-6fd7ada478ff2baff394355b5cdd342f.stex" ]
 
 [params]
 

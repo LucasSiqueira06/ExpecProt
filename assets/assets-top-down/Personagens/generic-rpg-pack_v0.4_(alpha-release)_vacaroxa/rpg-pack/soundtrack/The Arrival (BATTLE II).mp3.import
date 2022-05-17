@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/The Arrival (BATTLE II).mp3-ff8d352d472d2722cfe9c3ae0473b003.mp3str"
+
+[deps]
+
+source_file="res://assets/assets-top-down/Personagens/generic-rpg-pack_v0.4_(alpha-release)_vacaroxa/rpg-pack/soundtrack/The Arrival (BATTLE II).mp3"
+dest_files=[ "res://.import/The Arrival (BATTLE II).mp3-ff8d352d472d2722cfe9c3ae0473b003.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

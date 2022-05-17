@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bgrd_tree5.png-40264ba034afd2f849f7cd0802b9c371.stex"
+path="res://.import/bgrd_tree5.png-063ca0bc504c10bfd555da141ea81e06.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Dark Forest/bgrd_tree5.png"
-dest_files=[ "res://.import/bgrd_tree5.png-40264ba034afd2f849f7cd0802b9c371.stex" ]
+source_file="res://assets/assets-plataforma/Plataforma 2 - Dark Forest/bgrd_tree5.png"
+dest_files=[ "res://.import/bgrd_tree5.png-063ca0bc504c10bfd555da141ea81e06.stex" ]
 
 [params]
 

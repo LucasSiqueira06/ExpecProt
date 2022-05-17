@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/BG 6.png-c182b6c72c9cea59154090a9a3580efa.stex"
+path="res://.import/BG 6.png-33c1627dc7d70c866a8b4f8cd7280fb1.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Shikashi's Fantasy Icons Pack v2/BG 6.png"
-dest_files=[ "res://.import/BG 6.png-c182b6c72c9cea59154090a9a3580efa.stex" ]
+source_file="res://assets/assets-miscellaneous/Shikashi's Fantasy Icons Pack v2/BG 6.png"
+dest_files=[ "res://.import/BG 6.png-33c1627dc7d70c866a8b4f8cd7280fb1.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/BlueWizardDash_00012.png-0097532581f92b187526c701313f068c.stex"
+path="res://.import/BlueWizardDash_00012.png-080150b3eb19302fd1a7ed5c4a9990cd.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://BlueWizard/2BlueWizardJump/DashEffect/BlueWizardDash_00012.png"
-dest_files=[ "res://.import/BlueWizardDash_00012.png-0097532581f92b187526c701313f068c.stex" ]
+source_file="res://assets/assets-plataforma/Personagens/BlueWizard/2BlueWizardJump/DashEffect/BlueWizardDash_00012.png"
+dest_files=[ "res://.import/BlueWizardDash_00012.png-080150b3eb19302fd1a7ed5c4a9990cd.stex" ]
 
 [params]
 

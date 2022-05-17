@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/PlantPosion_00000.png-263d48d7f150177fe47a3ed16d86b64f.stex"
+path="res://.import/PlantPosion_00000.png-2e1d095082e503f12ddc96f62dc2501c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Plant Animations/Plant 8 Poison/PlantPosion_00000.png"
-dest_files=[ "res://.import/PlantPosion_00000.png-263d48d7f150177fe47a3ed16d86b64f.stex" ]
+source_file="res://assets/assets-plataforma/Plataforma 1 - Plant Animations/Plant 8 Poison/PlantPosion_00000.png"
+dest_files=[ "res://.import/PlantPosion_00000.png-2e1d095082e503f12ddc96f62dc2501c.stex" ]
 
 [params]
 

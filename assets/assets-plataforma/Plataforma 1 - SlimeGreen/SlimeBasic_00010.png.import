@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/SlimeBasic_00010.png-a604efbec63e0bcabe52a0800f26c90d.stex"
+path="res://.import/SlimeBasic_00010.png-22a3915bf50838037dbfbbfbd3e4e00d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://SlimeGreen/SlimeBasic_00010.png"
-dest_files=[ "res://.import/SlimeBasic_00010.png-a604efbec63e0bcabe52a0800f26c90d.stex" ]
+source_file="res://assets/assets-plataforma/Plataforma 1 - SlimeGreen/SlimeBasic_00010.png"
+dest_files=[ "res://.import/SlimeBasic_00010.png-22a3915bf50838037dbfbbfbd3e4e00d.stex" ]
 
 [params]
 

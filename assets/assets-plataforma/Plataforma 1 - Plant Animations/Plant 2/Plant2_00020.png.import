@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Plant2_00020.png-d97a9dece427b368ca9e2b953e481200.stex"
+path="res://.import/Plant2_00020.png-e18a10ee5bcce7335a15e942e4ff6a50.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Plant Animations/Plant 2/Plant2_00020.png"
-dest_files=[ "res://.import/Plant2_00020.png-d97a9dece427b368ca9e2b953e481200.stex" ]
+source_file="res://assets/assets-plataforma/Plataforma 1 - Plant Animations/Plant 2/Plant2_00020.png"
+dest_files=[ "res://.import/Plant2_00020.png-e18a10ee5bcce7335a15e942e4ff6a50.stex" ]
 
 [params]
 
