@@ -29,24 +29,9 @@ animations = [ {
 "name": "Player_Idle_Up",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 12 ), ExtResource( 4 ), ExtResource( 10 ), ExtResource( 5 ) ],
-"loop": true,
-"name": "Player_Walk_Down",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 11 ), ExtResource( 14 ), ExtResource( 13 ), ExtResource( 15 ) ],
-"loop": true,
-"name": "Player_Walk_Right",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 8 ) ],
 "loop": true,
 "name": "Player_Idle_Left",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 3 ), ExtResource( 1 ), ExtResource( 6 ), ExtResource( 9 ) ],
-"loop": true,
-"name": "Player_Walk_Up",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 12 ) ],
@@ -54,14 +39,29 @@ animations = [ {
 "name": "Player_Idle_Down",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 8 ), ExtResource( 2 ), ExtResource( 7 ), ExtResource( 16 ) ],
-"loop": true,
-"name": "Player_Walk_Left",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 11 ) ],
 "loop": true,
 "name": "Player_Idle_Right",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 11 ), ExtResource( 14 ), ExtResource( 13 ), ExtResource( 15 ) ],
+"loop": true,
+"name": "Player_Walk_Right",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 12 ), ExtResource( 4 ), ExtResource( 10 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "Player_Walk_Down",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ), ExtResource( 1 ), ExtResource( 6 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "Player_Walk_Up",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 8 ), ExtResource( 2 ), ExtResource( 7 ), ExtResource( 16 ) ],
+"loop": true,
+"name": "Player_Walk_Left",
 "speed": 5.0
 } ]
 
