@@ -37,7 +37,7 @@ func updateSprites():
 		else:
 			$AnimatedSprite.play("Player_Idle")
 	else:
-		$AnimatedSprite.play("Jump")
+		$AnimatedSprite.play("Player_Jump")
 		if(movement.x > 0):
 			$AnimatedSprite.flip_h = false
 		elif(movement.x < 0):

@@ -11,15 +11,15 @@ config_version=4
 [application]
 
 config/name="JornadaDoHeroi"
-run/main_scene="res://Scenes/TopDownMainLevel.tscn"
+run/main_scene="res://Scenes/PlataformForestLevel.tscn"
 config/icon="res://icon.png"
 
 [display]
 
 window/size/width=1280
 window/size/height=720
-window/size/test_width=640
-window/size/test_height=360
+window/size/test_width=1280
+window/size/test_height=720
 window/stretch/aspect="keep"
 
 [input]
