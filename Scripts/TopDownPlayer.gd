@@ -7,11 +7,11 @@ var facingDirection = 0;
 func _ready():
 	pass
 	
-func _process(delta):
+func _physics_process(delta):
 	direction = Vector2();
 	checkForDirections();
 	updateWalkSprites();
-	walk(delta);
+	move_and_slide(direction, Vector2.UP)
 	
 
 func checkForDirections():
@@ -52,6 +52,3 @@ func updateIdleSprites():
 	else:
 		$AnimatedSprite.play("Player_Idle_Left");
 	
-func walk(delta):
-	position += direction * delta
-		
