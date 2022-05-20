@@ -6,12 +6,14 @@ export var movementSpeed = 50;
 
 export var attackTime = 0.65;
 export var moveTime = 2.0;
+export var hitTime = 0.3;
 
 export var rightCollisionShapePosition = 0;
 export var leftCollisionShapePosition = 0;
 
 var direction = Vector2(1,0);
 var isAttacking = false;
+var isHitted = false;
 var facingRight = true;
 
 # Called when the node enters the scene tree for the first time.
@@ -25,7 +27,9 @@ func _physics_process(delta):
 	updateCollisionShapePosition();
 	
 func updateSprites():
-	if(isAttacking):
+	if(isHitted):
+		$AnimatedSprite.play("Enemy_Hit");
+	elif(isAttacking):
 		$AnimatedSprite.play("Enemy_Attack");
 	else:
 		if(direction.x != 0):
@@ -37,20 +41,28 @@ func updateSprites():
 func updateCollisionShapePosition():
 	if(facingRight):
 		$CollisionShape2D.position.x = rightCollisionShapePosition;
+		$Area2D/WeakPoint.position.x = rightCollisionShapePosition;
 	else:
 		$CollisionShape2D.position.x = leftCollisionShapePosition;
+		$Area2D/WeakPoint.position.x = leftCollisionShapePosition;
 
 func _on_MovementTimer_timeout():
 	attack();
 	direction.x *= -1
 
 func attack():
-	$MovementTimer.stop();
 	isAttacking = true;
 	$AttackTimer.start(attackTime);
 
 func _on_AttackTimer_timeout():
-	$AttackTimer.stop();
 	facingRight = not facingRight;
 	isAttacking = false;
 	$MovementTimer.start(moveTime);
+
+func _on_Area2D_body_entered(body):
+	if(body.name == "Sword"):
+		isHitted = true;
+		$HitTimer.start(hitTime);
+
+func _on_HitTimer_timeout():
+	isHitted = false;

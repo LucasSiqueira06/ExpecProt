@@ -56,7 +56,6 @@ func _on_AttackTimer_timeout():
 	isAttacking = false;
 	updateSwordColliders(true, true);
 
-
 func updateSprites():
 	if(not isAttacking):
 		if(is_on_floor()):
@@ -69,6 +68,3 @@ func updateSprites():
 	else:
 		$AnimatedSprite.play("Player_Attack");
 	$AnimatedSprite.flip_h = not facingRight;
-
-
-

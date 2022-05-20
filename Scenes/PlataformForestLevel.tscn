@@ -1039,17 +1039,17 @@ format = 1
 tile_data = PoolIntArray( 1114112, 0, 0, 1114120, 0, 0, 1179674, 6, 0, 1179721, 7, 0, 1245225, 4, 0, 1245243, 4, 0 )
 
 [node name="PlataformPlayer" parent="." instance=ExtResource( 5 )]
-position = Vector2( 2115, 509 )
+position = Vector2( 1028, 239 )
 
 [node name="PlataformEnemy1" parent="." instance=ExtResource( 17 )]
 position = Vector2( 230, 119 )
 
 [node name="PlataformEnemy2" parent="." instance=ExtResource( 18 )]
-position = Vector2( 1093, 232 )
+position = Vector2( 1090, 233 )
 scale = Vector2( 0.7, 0.7 )
 
 [node name="PlataformEnemy3" parent="." instance=ExtResource( 19 )]
-position = Vector2( 2148, 473 )
+position = Vector2( 2157, 508 )
 
 [node name="PropsAbovePlayer" type="TileMap" parent="."]
 tile_set = SubResource( 10 )
