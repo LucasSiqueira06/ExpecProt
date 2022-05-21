@@ -60,9 +60,22 @@ func _on_AttackTimer_timeout():
 	$MovementTimer.start(moveTime);
 
 func _on_Area2D_body_entered(body):
+		checkIfHitted(body);
+		doDamage();
+		checkIfDead();
+
+func checkIfHitted(body):
 	if(body.name == "Sword"):
 		isHitted = true;
 		$HitTimer.start(hitTime);
+
+func doDamage():
+	if(currentHp > 0):
+		currentHp -= 1;
+
+func checkIfDead():
+	if(currentHp == 0):
+		queue_free();
 
 func _on_HitTimer_timeout():
 	isHitted = false;

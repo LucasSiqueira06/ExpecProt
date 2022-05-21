@@ -5,7 +5,7 @@ export var currentHp = 5;
 export var jumpForce = 210
 export var gravity = 10
 export var walkSpeed = 150
-export var backfireDistance = 15;
+export var backfireDistance = 20;
 
 var direction
 
