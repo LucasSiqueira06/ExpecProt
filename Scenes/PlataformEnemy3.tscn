@@ -47,14 +47,14 @@ animations = [ {
 "name": "Enemy_Attack",
 "speed": 10.0
 }, {
-"frames": [ ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 20 ), ExtResource( 22 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 21 ) ],
-"loop": true,
-"name": "Enemy_Move",
-"speed": 10.0
-}, {
 "frames": [ ExtResource( 16 ), ExtResource( 5 ), ExtResource( 6 ) ],
 "loop": true,
 "name": "Enemy_Hit",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 20 ), ExtResource( 22 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 21 ) ],
+"loop": true,
+"name": "Enemy_Move",
 "speed": 10.0
 } ]
 
@@ -63,6 +63,8 @@ radius = 8.57143
 
 [node name="PlataformEnemy3" type="KinematicBody2D"]
 position = Vector2( 0, 6 )
+collision_layer = 4
+collision_mask = 4
 script = ExtResource( 31 )
 leftCollisionShapePosition = 3
 
@@ -88,6 +90,8 @@ autostart = true
 one_shot = true
 
 [node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
 
 [node name="WeakPoint" type="CollisionShape2D" parent="Area2D"]
 position = Vector2( -1, 1 )

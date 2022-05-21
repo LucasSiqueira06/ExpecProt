@@ -1,8 +1,12 @@
 extends KinematicBody2D
 
+export var maxHp = 5;
+export var currentHp = 5;
 export var jumpForce = 210
 export var gravity = 10
 export var walkSpeed = 150
+export var backfireDistance = 15;
+
 var direction
 
 var movement = Vector2(0,0)
@@ -68,3 +72,25 @@ func updateSprites():
 	else:
 		$AnimatedSprite.play("Player_Attack");
 	$AnimatedSprite.flip_h = not facingRight;
+
+
+func _on_Area2D_body_entered(body):
+	doDamage();
+	updatePosition(body);
+
+func doDamage():
+	if(currentHp > 0):
+		currentHp -= 1;
+	
+func updatePosition(body):
+	if(movement.x != 0):
+		if(facingRight):
+			position.x -= backfireDistance;
+		else:
+			position.x += backfireDistance;
+	else:
+		if(body.direction.x == 1):
+			position.x += backfireDistance;
+		else:
+			position.x -= backfireDistance;
+		

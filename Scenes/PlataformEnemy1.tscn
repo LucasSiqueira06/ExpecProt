@@ -34,15 +34,15 @@ animations = [ {
 "name": "Enemy_Attack",
 "speed": 15.0
 }, {
-"frames": [ ExtResource( 1 ), ExtResource( 7 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 6 ), ExtResource( 2 ), ExtResource( 5 ) ],
-"loop": true,
-"name": "Enemy_Move",
-"speed": 12.0
-}, {
 "frames": [ ExtResource( 12 ), ExtResource( 9 ), ExtResource( 10 ) ],
 "loop": true,
 "name": "Enemy_Hit",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 1 ), ExtResource( 7 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 6 ), ExtResource( 2 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "Enemy_Move",
+"speed": 12.0
 } ]
 
 [sub_resource type="CapsuleShape2D" id=2]
@@ -55,6 +55,8 @@ radius = 8.57143
 [node name="PlataformEnemy1" type="KinematicBody2D"]
 position = Vector2( 0, -1 )
 scale = Vector2( 0.7, 0.7 )
+collision_layer = 4
+collision_mask = 4
 script = ExtResource( 21 )
 __meta__ = {
 "_edit_group_": true
@@ -79,6 +81,8 @@ one_shot = true
 one_shot = true
 
 [node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
 
 [node name="WeakPoint" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource( 3 )
