@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/HUD.gd" type="Script" id=1]
+[ext_resource path="res://assets/assets-miscellaneous/lifeHeart.png" type="Texture" id=2]
+
+[node name="HUD" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Life1" type="Sprite" parent="."]
+position = Vector2( 40, 38 )
+scale = Vector2( 0.23622, 0.224409 )
+texture = ExtResource( 2 )
+
+[node name="Life2" type="Sprite" parent="."]
+position = Vector2( 108, 38 )
+scale = Vector2( 0.23622, 0.224409 )
+texture = ExtResource( 2 )
+
+[node name="Life3" type="Sprite" parent="."]
+position = Vector2( 176, 38 )
+scale = Vector2( 0.23622, 0.224409 )
+texture = ExtResource( 2 )
+
+[node name="Life4" type="Sprite" parent="."]
+position = Vector2( 245, 38 )
+scale = Vector2( 0.23622, 0.224409 )
+texture = ExtResource( 2 )
+
+[node name="Life5" type="Sprite" parent="."]
+position = Vector2( 314, 38 )
+scale = Vector2( 0.23622, 0.224409 )
+texture = ExtResource( 2 )

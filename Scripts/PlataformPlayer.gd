@@ -1,7 +1,5 @@
 extends KinematicBody2D
 
-export var maxHp = 5;
-export var currentHp = 5;
 export var jumpForce = 210
 export var gravity = 10
 export var walkSpeed = 150
@@ -81,9 +79,9 @@ func _on_Area2D_body_entered(body):
 	checkIfDead();
 
 func doDamage():
-	if(currentHp > 0):
-		currentHp -= 1;
-	
+	if(HudSimpleton.currentHp >= 0):
+		HudSimpleton.currentHp -= 1;
+		
 func updatePosition(body):
 	if(movement.x != 0):
 		if(facingRight):
@@ -97,5 +95,6 @@ func updatePosition(body):
 			position.x -= backfireDistance;
 		
 func checkIfDead():
-	if(currentHp < 1):
+	if(HudSimpleton.currentHp < 0):
 		position = startPosition;
+		HudSimpleton.currentHp = HudSimpleton.maxHp;

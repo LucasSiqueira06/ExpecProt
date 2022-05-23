@@ -14,6 +14,10 @@ config/name="JornadaDoHeroi"
 run/main_scene="res://Scenes/PlataformForestLevel.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+HudSimpleton="*res://Scripts/HUDSimpleton.gd"
+
 [display]
 
 window/size/width=1280

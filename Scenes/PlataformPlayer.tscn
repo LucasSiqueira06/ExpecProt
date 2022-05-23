@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=2]
+[gd_scene load_steps=47 format=2]
 
 [ext_resource path="res://assets/assets-plataforma/Personagens/Knight/noBKG_KnightRun_strip.png" type="Texture" id=1]
 [ext_resource path="res://assets/assets-plataforma/Personagens/Knight/noBKG_KnightIdle_strip.png" type="Texture" id=2]
@@ -16,6 +16,7 @@
 [ext_resource path="res://assets/assets-plataforma/Personagens/Knight/Knight_Jump/Knight_Jump13.tres" type="Texture" id=14]
 [ext_resource path="res://assets/assets-plataforma/Personagens/Knight/Knight_Jump/Knight_Jump11.tres" type="Texture" id=15]
 [ext_resource path="res://Scripts/PlataformPlayer.gd" type="Script" id=16]
+[ext_resource path="res://Scenes/HUD.tscn" type="PackedScene" id=17]
 [ext_resource path="res://assets/assets-plataforma/Personagens/Knight/Knight_Attack/Knight_Attack4.tres" type="Texture" id=18]
 [ext_resource path="res://assets/assets-plataforma/Personagens/Knight/Knight_Attack/Knight_Attack6.tres" type="Texture" id=20]
 [ext_resource path="res://assets/assets-plataforma/Personagens/Knight/Knight_Attack/Knight_Attack2.tres" type="Texture" id=21]
@@ -184,6 +185,10 @@ collision_mask = 4
 [node name="WeakSpot" type="CollisionShape2D" parent="Area2D"]
 position = Vector2( 0, -1 )
 shape = SubResource( 26 )
+
+[node name="HUD" parent="Area2D" instance=ExtResource( 17 )]
+position = Vector2( -159, -87 )
+scale = Vector2( 0.15, 0.15 )
 
 [connection signal="timeout" from="AttackTimer" to="." method="_on_AttackTimer_timeout"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
