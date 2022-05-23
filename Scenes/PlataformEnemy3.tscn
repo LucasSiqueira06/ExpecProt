@@ -66,6 +66,7 @@ position = Vector2( 0, 6 )
 collision_layer = 4
 collision_mask = 4
 script = ExtResource( 31 )
+movementSpeed = 75
 leftCollisionShapePosition = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -89,6 +90,9 @@ autostart = true
 [node name="HitTimer" type="Timer" parent="."]
 one_shot = true
 
+[node name="DropDeadTimer" type="Timer" parent="."]
+one_shot = true
+
 [node name="Area2D" type="Area2D" parent="."]
 collision_layer = 0
 collision_mask = 2
@@ -100,4 +104,5 @@ shape = SubResource( 3 )
 [connection signal="timeout" from="AttackTimer" to="." method="_on_AttackTimer_timeout"]
 [connection signal="timeout" from="MovementTimer" to="." method="_on_MovementTimer_timeout"]
 [connection signal="timeout" from="HitTimer" to="." method="_on_HitTimer_timeout"]
+[connection signal="timeout" from="DropDeadTimer" to="." method="_on_DropDeadTimer_timeout"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]

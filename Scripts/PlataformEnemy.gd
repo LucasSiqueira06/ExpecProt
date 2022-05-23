@@ -6,7 +6,8 @@ export var movementSpeed = 50;
 
 export var attackTime = 0.65;
 export var moveTime = 2.0;
-export var hitTime = 0.3;
+export var hitTime = 0.7;
+export var dropDeadTime = 0.3;
 
 export var rightCollisionShapePosition = 0;
 export var leftCollisionShapePosition = 0;
@@ -60,6 +61,7 @@ func _on_AttackTimer_timeout():
 	$MovementTimer.start(moveTime);
 
 func _on_Area2D_body_entered(body):
+	if($HitTimer.is_stopped()):
 		checkIfHitted(body);
 		doDamage();
 		checkIfDead();
@@ -68,6 +70,9 @@ func checkIfHitted(body):
 	if(body.name == "Sword"):
 		isHitted = true;
 		$HitTimer.start(hitTime);
+		
+func _on_HitTimer_timeout():
+	isHitted = false;
 
 func doDamage():
 	if(currentHp > 0):
@@ -75,7 +80,7 @@ func doDamage():
 
 func checkIfDead():
 	if(currentHp == 0):
-		queue_free();
+		$DropDeadTimer.start(dropDeadTime);
 
-func _on_HitTimer_timeout():
-	isHitted = false;
+func _on_DropDeadTimer_timeout():
+	queue_free();

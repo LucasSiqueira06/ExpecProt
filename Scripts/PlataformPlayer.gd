@@ -5,7 +5,8 @@ export var currentHp = 5;
 export var jumpForce = 210
 export var gravity = 10
 export var walkSpeed = 150
-export var backfireDistance = 20;
+export var backfireDistance = 30;
+export var startPosition = Vector2(0,0);
 
 var direction
 
@@ -77,6 +78,7 @@ func updateSprites():
 func _on_Area2D_body_entered(body):
 	doDamage();
 	updatePosition(body);
+	checkIfDead();
 
 func doDamage():
 	if(currentHp > 0):
@@ -94,3 +96,6 @@ func updatePosition(body):
 		else:
 			position.x -= backfireDistance;
 		
+func checkIfDead():
+	if(currentHp < 1):
+		position = startPosition;

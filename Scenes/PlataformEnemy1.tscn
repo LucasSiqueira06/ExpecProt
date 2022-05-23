@@ -37,7 +37,7 @@ animations = [ {
 "frames": [ ExtResource( 12 ), ExtResource( 9 ), ExtResource( 10 ) ],
 "loop": true,
 "name": "Enemy_Hit",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [ ExtResource( 1 ), ExtResource( 7 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 6 ), ExtResource( 2 ), ExtResource( 5 ) ],
 "loop": true,
@@ -61,7 +61,8 @@ script = ExtResource( 21 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
-animation = "Enemy_Idle"
+animation = "Enemy_Hit"
+frame = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 2 )
@@ -77,6 +78,9 @@ one_shot = true
 [node name="HitTimer" type="Timer" parent="."]
 one_shot = true
 
+[node name="DropDeadTimer" type="Timer" parent="."]
+one_shot = true
+
 [node name="Area2D" type="Area2D" parent="."]
 collision_layer = 0
 collision_mask = 2
@@ -87,4 +91,5 @@ shape = SubResource( 3 )
 [connection signal="timeout" from="MovementTimer" to="." method="_on_MovementTimer_timeout"]
 [connection signal="timeout" from="AttackTimer" to="." method="_on_AttackTimer_timeout"]
 [connection signal="timeout" from="HitTimer" to="." method="_on_HitTimer_timeout"]
+[connection signal="timeout" from="DropDeadTimer" to="." method="_on_DropDeadTimer_timeout"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]

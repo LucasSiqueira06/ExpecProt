@@ -1041,7 +1041,8 @@ format = 1
 tile_data = PoolIntArray( 1114112, 0, 0, 1114120, 0, 0, 1179674, 6, 0, 1179721, 7, 0, 1245225, 4, 0, 1245243, 4, 0 )
 
 [node name="PlataformPlayer" parent="." instance=ExtResource( 5 )]
-position = Vector2( 180, 147 )
+position = Vector2( 907, 243 )
+startPosition = Vector2( 37, 147 )
 
 [node name="PlataformEnemy1" parent="." instance=ExtResource( 17 )]
 position = Vector2( 230, 119 )
