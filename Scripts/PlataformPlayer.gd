@@ -5,6 +5,7 @@ export var gravity = 10
 export var walkSpeed = 150
 export var backfireDistance = 30;
 export var startPosition = Vector2(0,0);
+export var movementStrength = 1.0;
 
 var direction
 
@@ -16,8 +17,21 @@ var isAttacking = false;
 var facingRight = true;
 
 func _ready():
-	pass
+	Serial.connect("attack", self, "_on_attack");
+	Serial.connect("leftFeet", self, "_on_left_feet");
+	Serial.connect("rightFeet", self, "_on_right_feet");
 
+func _on_attack():
+	Input.action_press("attack");
+	
+func _on_left_feet():
+	print("right - player");
+	Input.action_press("right", movementStrength);
+	Input.action_release("right");
+
+func _on_right_feet():
+	Input.action_press("right", movementStrength);
+	
 func _physics_process(delta):
 	jumpOrFall();
 	horizontalMove();

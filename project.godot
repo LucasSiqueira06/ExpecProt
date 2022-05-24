@@ -16,6 +16,7 @@ config/icon="res://icon.png"
 
 [autoload]
 
+Serial="*res://Scripts/Serial.gd"
 HudSimpleton="*res://Scripts/HUDSimpleton.gd"
 
 [display]
