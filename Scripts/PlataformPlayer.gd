@@ -122,16 +122,9 @@ func kill():
 
 func _on_Spikes_pinch():
 	doDamage();
-	if(facingRight):
-			position.x -= backfireDistance;
+	if(facingRight or movement.x == 0):
+		position.x -= backfireDistance;
 	else:
 		position.x += backfireDistance;
+	position.y -= backfireDistance;
 	checkIfDead();
-
-
-func _on_Spikes2_pinch():
-	pass # Replace with function body.
-
-
-func _on_Spikes3_pinch():
-	pass # Replace with function body.

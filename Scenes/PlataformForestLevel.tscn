@@ -1068,8 +1068,8 @@ format = 1
 tile_data = PoolIntArray( 1179624, 0, 0, 1179632, 0, 0, 1179640, 0, 0, 1114112, 0, 0, 1114120, 0, 0, 1179674, 6, 0, 1179721, 7, 0, 1245225, 4, 0, 1245243, 4, 0 )
 
 [node name="PlataformPlayer" parent="." instance=ExtResource( 5 )]
-position = Vector2( 2678, 508 )
-startPosition = Vector2( 2678, 508 )
+position = Vector2( 71, 147 )
+startPosition = Vector2( 169, 147 )
 
 [node name="PlataformEnemy1" parent="." instance=ExtResource( 17 )]
 position = Vector2( 230, 119 )
@@ -1098,26 +1098,26 @@ position = Vector2( 0, -88 )
 position = Vector2( 1313, 407 )
 
 [node name="Spikes" parent="." instance=ExtResource( 22 )]
-position = Vector2( 2784, 541 )
+position = Vector2( 2781, 544 )
 rotation = 0.462512
-scale = Vector2( 0.07, 0.1 )
+scale = Vector2( 0.05, 0.07 )
 
 [node name="Spikes2" parent="." instance=ExtResource( 22 )]
-position = Vector2( 2863, 580 )
+position = Vector2( 2861, 584 )
 rotation = 0.462512
-scale = Vector2( 0.07, 0.1 )
+scale = Vector2( 0.05, 0.07 )
 
 [node name="Spikes3" parent="." instance=ExtResource( 22 )]
-position = Vector2( 2947, 622 )
+position = Vector2( 2945, 626 )
 rotation = 0.462512
-scale = Vector2( 0.07, 0.1 )
+scale = Vector2( 0.05, 0.07 )
 
 [node name="Spikes4" parent="." instance=ExtResource( 22 )]
 position = Vector2( 1300, 373 )
 scale = Vector2( 0.07, 0.1 )
+script = null
 
 [connection signal="death" from="DeathArea" to="PlataformPlayer" method="_on_DeathArea_death"]
 [connection signal="pinch" from="Spikes" to="PlataformPlayer" method="_on_Spikes_pinch"]
-[connection signal="pinch" from="Spikes2" to="PlataformPlayer" method="_on_Spikes2_pinch"]
-[connection signal="pinch" from="Spikes3" to="PlataformPlayer" method="_on_Spikes3_pinch"]
-[connection signal="pinch" from="Spikes4" to="PlataformPlayer" method="_on_Spikes_pinch"]
+[connection signal="pinch" from="Spikes2" to="PlataformPlayer" method="_on_Spikes_pinch"]
+[connection signal="pinch" from="Spikes3" to="PlataformPlayer" method="_on_Spikes_pinch"]
