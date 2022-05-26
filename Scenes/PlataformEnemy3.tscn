@@ -42,14 +42,14 @@ animations = [ {
 "name": "Enemy_Idle",
 "speed": 10.0
 }, {
-"frames": [ ExtResource( 29 ), ExtResource( 1 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 17 ), ExtResource( 13 ), ExtResource( 4 ), ExtResource( 8 ) ],
-"loop": true,
-"name": "Enemy_Attack",
-"speed": 10.0
-}, {
 "frames": [ ExtResource( 16 ), ExtResource( 5 ), ExtResource( 6 ) ],
 "loop": true,
 "name": "Enemy_Hit",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 29 ), ExtResource( 1 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 17 ), ExtResource( 13 ), ExtResource( 4 ), ExtResource( 8 ) ],
+"loop": true,
+"name": "Enemy_Attack",
 "speed": 10.0
 }, {
 "frames": [ ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 20 ), ExtResource( 22 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 21 ) ],

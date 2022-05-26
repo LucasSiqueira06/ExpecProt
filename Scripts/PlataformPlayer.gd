@@ -110,5 +110,28 @@ func updatePosition(body):
 		
 func checkIfDead():
 	if(HudSimpleton.currentHp < 0):
-		position = startPosition;
-		HudSimpleton.currentHp = HudSimpleton.maxHp;
+		kill();
+
+func _on_DeathArea_death():
+	kill();
+
+func kill():
+	position = startPosition;
+	HudSimpleton.currentHp = HudSimpleton.maxHp;
+
+
+func _on_Spikes_pinch():
+	doDamage();
+	if(facingRight):
+			position.x -= backfireDistance;
+	else:
+		position.x += backfireDistance;
+	checkIfDead();
+
+
+func _on_Spikes2_pinch():
+	pass # Replace with function body.
+
+
+func _on_Spikes3_pinch():
+	pass # Replace with function body.
