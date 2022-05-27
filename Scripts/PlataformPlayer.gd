@@ -3,7 +3,7 @@ extends KinematicBody2D
 export var jumpForce = 210
 export var gravity = 10
 export var walkSpeed = 150
-export var backfireDistance = 30;
+export var backfireDistance = 35;
 export var startPosition = Vector2(0,0);
 export var movementStrength = 1.0;
 

@@ -21,38 +21,6 @@
 [ext_resource path="res://assets/assets-plataforma/Personagens/Knight/Knight_Attack/Knight_Attack6.tres" type="Texture" id=20]
 [ext_resource path="res://assets/assets-plataforma/Personagens/Knight/Knight_Attack/Knight_Attack2.tres" type="Texture" id=21]
 
-[sub_resource type="AtlasTexture" id=16]
-atlas = ExtResource( 1 )
-region = Rect2( 0, 0, 96, 64 )
-
-[sub_resource type="AtlasTexture" id=17]
-atlas = ExtResource( 1 )
-region = Rect2( 96, 0, 96, 64 )
-
-[sub_resource type="AtlasTexture" id=18]
-atlas = ExtResource( 1 )
-region = Rect2( 192, 0, 96, 64 )
-
-[sub_resource type="AtlasTexture" id=19]
-atlas = ExtResource( 1 )
-region = Rect2( 288, 0, 96, 64 )
-
-[sub_resource type="AtlasTexture" id=20]
-atlas = ExtResource( 1 )
-region = Rect2( 384, 0, 96, 64 )
-
-[sub_resource type="AtlasTexture" id=21]
-atlas = ExtResource( 1 )
-region = Rect2( 480, 0, 96, 64 )
-
-[sub_resource type="AtlasTexture" id=22]
-atlas = ExtResource( 1 )
-region = Rect2( 576, 0, 96, 64 )
-
-[sub_resource type="AtlasTexture" id=23]
-atlas = ExtResource( 1 )
-region = Rect2( 672, 0, 96, 64 )
-
 [sub_resource type="AtlasTexture" id=1]
 atlas = ExtResource( 2 )
 region = Rect2( 0, 0, 64, 64 )
@@ -113,27 +81,59 @@ region = Rect2( 832, 0, 64, 64 )
 atlas = ExtResource( 2 )
 region = Rect2( 896, 0, 64, 64 )
 
+[sub_resource type="AtlasTexture" id=16]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 0, 96, 64 )
+
+[sub_resource type="AtlasTexture" id=17]
+atlas = ExtResource( 1 )
+region = Rect2( 96, 0, 96, 64 )
+
+[sub_resource type="AtlasTexture" id=18]
+atlas = ExtResource( 1 )
+region = Rect2( 192, 0, 96, 64 )
+
+[sub_resource type="AtlasTexture" id=19]
+atlas = ExtResource( 1 )
+region = Rect2( 288, 0, 96, 64 )
+
+[sub_resource type="AtlasTexture" id=20]
+atlas = ExtResource( 1 )
+region = Rect2( 384, 0, 96, 64 )
+
+[sub_resource type="AtlasTexture" id=21]
+atlas = ExtResource( 1 )
+region = Rect2( 480, 0, 96, 64 )
+
+[sub_resource type="AtlasTexture" id=22]
+atlas = ExtResource( 1 )
+region = Rect2( 576, 0, 96, 64 )
+
+[sub_resource type="AtlasTexture" id=23]
+atlas = ExtResource( 1 )
+region = Rect2( 672, 0, 96, 64 )
+
 [sub_resource type="SpriteFrames" id=24]
 animations = [ {
-"frames": [ ExtResource( 7 ), ExtResource( 5 ), ExtResource( 3 ), ExtResource( 11 ), ExtResource( 4 ), ExtResource( 6 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 15 ), ExtResource( 12 ), ExtResource( 14 ) ],
-"loop": true,
-"name": "Player_Jump",
-"speed": 10.0
-}, {
-"frames": [ SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ) ],
-"loop": true,
-"name": "Player_Run",
-"speed": 10.0
-}, {
 "frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ) ],
 "loop": true,
 "name": "Player_Idle",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 7 ), ExtResource( 5 ), ExtResource( 3 ), ExtResource( 11 ), ExtResource( 4 ), ExtResource( 6 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 15 ), ExtResource( 12 ), ExtResource( 14 ) ],
+"loop": true,
+"name": "Player_Jump",
 "speed": 10.0
 }, {
 "frames": [ ExtResource( 8 ), ExtResource( 18 ), ExtResource( 13 ), ExtResource( 20 ), ExtResource( 21 ) ],
 "loop": true,
 "name": "Player_Attack",
 "speed": 12.0
+}, {
+"frames": [ SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ) ],
+"loop": true,
+"name": "Player_Run",
+"speed": 10.0
 } ]
 
 [sub_resource type="CapsuleShape2D" id=25]
@@ -157,7 +157,7 @@ shape = SubResource( 25 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
-zoom = Vector2( 0.25, 0.25 )
+zoom = Vector2( 0.2, 0.2 )
 
 [node name="Sword" type="StaticBody2D" parent="."]
 visible = false
@@ -187,7 +187,7 @@ position = Vector2( 0, -1 )
 shape = SubResource( 26 )
 
 [node name="HUD" parent="Area2D" instance=ExtResource( 17 )]
-position = Vector2( -159, -87 )
+position = Vector2( -124, -70 )
 scale = Vector2( 0.15, 0.15 )
 
 [connection signal="timeout" from="AttackTimer" to="." method="_on_AttackTimer_timeout"]

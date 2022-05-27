@@ -1,0 +1,107 @@
+[gd_scene load_steps=32 format=2]
+
+[ext_resource path="res://assets/assets-plataforma/Personagens/Bringer-Of-Death/Bringer-Of-Death-Attack/Bringer_of_Death_Attack_2.tres" type="Texture" id=1]
+[ext_resource path="res://assets/assets-plataforma/Personagens/Bringer-Of-Death/Bringer-Of-Death-Attack/Bringer_of_Death_Attack_4.tres" type="Texture" id=2]
+[ext_resource path="res://assets/assets-plataforma/Personagens/Bringer-Of-Death/Bringer-Of-Death-Attack/Bringer_of_Death_Attack_6.tres" type="Texture" id=3]
+[ext_resource path="res://assets/assets-plataforma/Personagens/Bringer-Of-Death/Bringer-Of-Death-Attack/Bringer_of_Death_Attack_1.tres" type="Texture" id=4]
+[ext_resource path="res://assets/assets-plataforma/Personagens/Bringer-Of-Death/Bringer-Of-Death-Idle/Bringer_of_Death_Idle5.tres" type="Texture" id=5]
+[ext_resource path="res://assets/assets-plataforma/Personagens/Bringer-Of-Death/Bringer-Of-Death-Idle/Bringer_of_Death_Idle2.tres" type="Texture" id=6]
+[ext_resource path="res://assets/assets-plataforma/Personagens/Bringer-Of-Death/Bringer-Of-Death-Idle/Bringer_of_Death_Idle3.tres" type="Texture" id=7]
+[ext_resource path="res://assets/assets-plataforma/Personagens/Bringer-Of-Death/Bringer-Of-Death-Attack/Bringer_of_Death_Attack_7.tres" type="Texture" id=8]
+[ext_resource path="res://assets/assets-plataforma/Personagens/Bringer-Of-Death/Bringer-Of-Death-Idle/Bringer_of_Death_Idle4.tres" type="Texture" id=9]
+[ext_resource path="res://assets/assets-plataforma/Personagens/Bringer-Of-Death/Bringer-Of-Death-Idle/Bringer_of_Death_Idle8.tres" type="Texture" id=10]
+[ext_resource path="res://assets/assets-plataforma/Personagens/Bringer-Of-Death/Bringer-Of-Death-Idle/Bringer_of_Death_Idle1.tres" type="Texture" id=11]
+[ext_resource path="res://assets/assets-plataforma/Personagens/Bringer-Of-Death/Bringer-Of-Death-Idle/Bringer_of_Death_Idle6.tres" type="Texture" id=12]
+[ext_resource path="res://assets/assets-plataforma/Personagens/Bringer-Of-Death/Bringer-Of-Death-Attack/Bringer_of_Death_Attack_3.tres" type="Texture" id=13]
+[ext_resource path="res://assets/assets-plataforma/Personagens/Bringer-Of-Death/Bringer-Of-Death-Idle/Bringer_of_Death_Idle7.tres" type="Texture" id=14]
+[ext_resource path="res://assets/assets-plataforma/Personagens/Bringer-Of-Death/Bringer-Of-Death-Walk/Bringer_of_Death_Walk_2.tres" type="Texture" id=15]
+[ext_resource path="res://assets/assets-plataforma/Personagens/Bringer-Of-Death/Bringer-Of-Death-Walk/Bringer_of_Death_Walk_3.tres" type="Texture" id=16]
+[ext_resource path="res://assets/assets-plataforma/Personagens/Bringer-Of-Death/Bringer-Of-Death-Attack/Bringer_of_Death_Attack_5.tres" type="Texture" id=17]
+[ext_resource path="res://assets/assets-plataforma/Personagens/Bringer-Of-Death/Bringer-Of-Death-Walk/Bringer_of_Death_Walk_8.tres" type="Texture" id=18]
+[ext_resource path="res://assets/assets-plataforma/Personagens/Bringer-Of-Death/Bringer-Of-Death-Walk/Bringer_of_Death_Walk_1.tres" type="Texture" id=19]
+[ext_resource path="res://assets/assets-plataforma/Personagens/Bringer-Of-Death/Bringer-Of-Death-Walk/Bringer_of_Death_Walk_5.tres" type="Texture" id=20]
+[ext_resource path="res://assets/assets-plataforma/Personagens/Bringer-Of-Death/Bringer-Of-Death-Walk/Bringer_of_Death_Walk_6.tres" type="Texture" id=21]
+[ext_resource path="res://assets/assets-plataforma/Personagens/Bringer-Of-Death/Bringer-Of-Death-Walk/Bringer_of_Death_Walk_4.tres" type="Texture" id=22]
+[ext_resource path="res://assets/assets-plataforma/Personagens/Bringer-Of-Death/Bringer-Of-Death-Walk/Bringer_of_Death_Walk_7.tres" type="Texture" id=23]
+[ext_resource path="res://assets/assets-plataforma/Personagens/Bringer-Of-Death/Bringer-Of-Death-Hit/Bringer_Of_Death_Hit3.tres" type="Texture" id=24]
+[ext_resource path="res://assets/assets-plataforma/Personagens/Bringer-Of-Death/Bringer-Of-Death-Hit/Bringer_Of_Death_Hit2.tres" type="Texture" id=25]
+[ext_resource path="res://assets/assets-plataforma/Personagens/Bringer-Of-Death/Bringer-Of-Death-Hit/Bringer_Of_Death_Hit1.tres" type="Texture" id=26]
+[ext_resource path="res://assets/assets-plataforma/Personagens/Bringer-Of-Death/Bringer-Of-Death-Attack/Bringer_of_Death_Attack_8.tres" type="Texture" id=29]
+[ext_resource path="res://Scripts/PlataformEnemy.gd" type="Script" id=31]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 11 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 9 ), ExtResource( 5 ), ExtResource( 12 ), ExtResource( 14 ), ExtResource( 10 ) ],
+"loop": true,
+"name": "Enemy_Idle",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 26 ), ExtResource( 25 ), ExtResource( 24 ) ],
+"loop": true,
+"name": "Enemy_Hit",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 19 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 22 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 23 ), ExtResource( 18 ) ],
+"loop": true,
+"name": "Enemy_Move",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 4 ), ExtResource( 1 ), ExtResource( 13 ), ExtResource( 2 ), ExtResource( 17 ), ExtResource( 3 ), ExtResource( 8 ), ExtResource( 29 ) ],
+"loop": true,
+"name": "Enemy_Attack",
+"speed": 10.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=4]
+radius = 8.0
+height = 32.0
+
+[sub_resource type="CapsuleShape2D" id=5]
+radius = 8.0
+height = 33.3333
+
+[node name="PlataformEnemy4" type="KinematicBody2D"]
+position = Vector2( 0, 6 )
+scale = Vector2( 1.5, 1.5 )
+collision_layer = 4
+collision_mask = 4
+script = ExtResource( 31 )
+movementSpeed = 75
+leftCollisionShapePosition = 3
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 2, -7 )
+frames = SubResource( 1 )
+animation = "Enemy_Move"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -3.33333, -6 )
+shape = SubResource( 4 )
+
+[node name="AttackTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="MovementTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+autostart = true
+
+[node name="HitTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="DropDeadTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+
+[node name="WeakPoint" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( -3.33333, -6 )
+shape = SubResource( 5 )
+
+[connection signal="timeout" from="AttackTimer" to="." method="_on_AttackTimer_timeout"]
+[connection signal="timeout" from="MovementTimer" to="." method="_on_MovementTimer_timeout"]
+[connection signal="timeout" from="HitTimer" to="." method="_on_HitTimer_timeout"]
+[connection signal="timeout" from="DropDeadTimer" to="." method="_on_DropDeadTimer_timeout"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
