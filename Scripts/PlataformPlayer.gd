@@ -8,7 +8,11 @@ export var startPosition = Vector2(0,0);
 export var movementStrength = 0.7;
 export var enemiesArray = ["BatEnemy1", "SnakeEnemy1", "DogEnemy1", "DogEnemy2", "Boss"];
 export var piezoTime = 0.4;
+export var dashDistance = Vector2(3000, 0);
+export var deathTime = 1.2;
 
+var isDead = false;
+var dashUsed = false;
 var direction;
 var piezoRight = true;
 var movement = Vector2(0,0);
@@ -26,6 +30,16 @@ func _ready():
 	Serial.connect("left", self, "_on_left_turn");
 	Serial.connect("right", self, "_on_right_turn");	
 	Serial.connect("jump", self, "_on_jump");
+	Serial.connect("dash", self, "_on_dash");
+
+func _on_dash():
+	if(not is_on_floor() && not dashUsed):
+		if(facingRight):
+			move_and_slide(dashDistance, Vector2.UP);
+		else:
+			move_and_slide(-dashDistance, Vector2.UP);
+		dashUsed = true;
+		
 
 func _on_jump():
 	Input.action_press("up");
@@ -58,11 +72,13 @@ func _on_left_turn():
 
 
 func _physics_process(delta):
-	jumpOrFall();
-	horizontalMove();
-	updateFacingDirection();
-	checkAttack();
-	updateSprites();
+	if(not isDead):
+		jumpOrFall();
+		horizontalMove();
+		updateFacingDirection();
+		checkAttack();
+		updateSprites();
+		updateDash();
 
 func jumpOrFall():
 	if(not is_on_floor()):
@@ -106,7 +122,10 @@ func updateSprites():
 			else:
 				$AnimatedSprite.play("Player_Idle");
 		else:
-			$AnimatedSprite.play("Player_Jump");
+			if(dashUsed && movement.x != 0):
+				$AnimatedSprite.play("Player_Dash");
+			else:
+				$AnimatedSprite.play("Player_Jump");
 	else:
 		$AnimatedSprite.play("Player_Attack");
 	$AnimatedSprite.flip_h = not facingRight;
@@ -148,10 +167,16 @@ func _on_DeathArea_death():
 	kill();
 
 func kill():
-	position = startPosition;
+	isDead = true;
+	#position = startPosition;
 	HudSimpleton.currentHp = HudSimpleton.maxHp;
-	get_tree().change_scene("res://Scenes//GameOver.tscn")
+	$DeathTimer.start(deathTime);
+	$AnimatedSprite.play("Player_Death");
+	$AnimatedSprite.flip_h = not facingRight;
 
+func _on_DeathTimer_timeout():
+	isDead = false;
+	get_tree().change_scene("res://Scenes//GameOver.tscn")
 
 func _on_Spikes_pinch():
 	doDamage();
@@ -161,9 +186,9 @@ func _on_Spikes_pinch():
 		position.x += backfireDistance;
 	position.y -= backfireDistance;
 	checkIfDead();
-
-
-
-
+	
+func updateDash():
+	if(is_on_floor()):
+		dashUsed = false;
 
 
