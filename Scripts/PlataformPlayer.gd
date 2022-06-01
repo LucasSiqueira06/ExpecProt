@@ -5,33 +5,58 @@ export var gravity = 10
 export var walkSpeed = 150
 export var backfireDistance = 35;
 export var startPosition = Vector2(0,0);
-export var movementStrength = 1.0;
+export var movementStrength = 0.7;
+export var enemiesArray = ["BatEnemy1", "SnakeEnemy1", "DogEnemy1", "DogEnemy2", "Boss"];
+export var piezoTime = 0.4;
 
-var direction
-
-var movement = Vector2(0,0)
+var direction;
+var piezoRight = true;
+var movement = Vector2(0,0);
 
 export var attackingTime = 0.5;
 
 var isAttacking = false;
 var facingRight = true;
+var piezoJump = true;
 
 func _ready():
 	Serial.connect("attack", self, "_on_attack");
 	Serial.connect("leftFeet", self, "_on_left_feet");
 	Serial.connect("rightFeet", self, "_on_right_feet");
+	Serial.connect("left", self, "_on_left_turn");
+	Serial.connect("right", self, "_on_right_turn");	
+	Serial.connect("jump", self, "_on_jump");
+
+func _on_jump():
+	Input.action_press("up");
 
 func _on_attack():
 	Input.action_press("attack");
 	
 func _on_left_feet():
-	print("right - player");
-	Input.action_press("right", movementStrength);
-	Input.action_release("right");
-
-func _on_right_feet():
-	Input.action_press("right", movementStrength);
+	piezoMove();
 	
+func _on_right_feet():
+	piezoMove();
+
+func piezoMove():
+	if(piezoRight):
+		Input.action_press("right", movementStrength);
+	else:
+		Input.action_press("left", movementStrength);
+	$PiezoTimer.start(piezoTime);
+
+func _on_PiezoTimer_timeout():
+	Input.action_release("right");
+	Input.action_release("left");
+	
+func _on_right_turn():
+	piezoRight = true;
+
+func _on_left_turn():
+	piezoRight = false;
+
+
 func _physics_process(delta):
 	jumpOrFall();
 	horizontalMove();
@@ -88,9 +113,16 @@ func updateSprites():
 
 
 func _on_Area2D_body_entered(body):
-	doDamage();
-	updatePosition(body);
-	checkIfDead();
+	if(contains(body.name)):
+		doDamage();
+		updatePosition(body);
+		checkIfDead();
+
+func contains(name):
+	for i in enemiesArray.size():
+		if(name == enemiesArray[i]):
+			return true;
+	return false;
 
 func doDamage():
 	if(HudSimpleton.currentHp >= 0):
@@ -107,7 +139,7 @@ func updatePosition(body):
 			position.x += backfireDistance;
 		else:
 			position.x -= backfireDistance;
-		
+
 func checkIfDead():
 	if(HudSimpleton.currentHp < 0):
 		kill();
@@ -118,6 +150,7 @@ func _on_DeathArea_death():
 func kill():
 	position = startPosition;
 	HudSimpleton.currentHp = HudSimpleton.maxHp;
+	get_tree().change_scene("res://Scenes//GameOver.tscn")
 
 
 func _on_Spikes_pinch():
@@ -128,3 +161,9 @@ func _on_Spikes_pinch():
 		position.x += backfireDistance;
 	position.y -= backfireDistance;
 	checkIfDead();
+
+
+
+
+
+

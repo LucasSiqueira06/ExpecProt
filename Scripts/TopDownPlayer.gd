@@ -1,11 +1,49 @@
 extends KinematicBody2D
 
-export var walkSpeed = 50;
+export var walkSpeed = 40;
 var direction = Vector2();
 var facingDirection = 0; 
+var piezoTime = 0.5;
 
 func _ready():
-	pass
+	Serial.connect("leftFeet", self, "_on_left_feet");
+	Serial.connect("rightFeet", self, "_on_right_feet");
+	Serial.connect("left", self, "_on_left_turn");
+	Serial.connect("right", self, "_on_right_turn");
+	Serial.connect("up", self, "_on_up_turn");
+	Serial.connect("down", self, "_on_down_turn");
+	
+func _on_down_turn():
+	facingDirection = 0;
+func _on_right_turn():
+	facingDirection = 1;
+func _on_up_turn():
+	facingDirection = 2;
+func _on_left_turn():
+	facingDirection = 3;
+
+func _on_left_feet():
+	piezoMove();
+	
+func _on_right_feet():
+	piezoMove();
+
+func piezoMove():
+	if(facingDirection == 0):
+		Input.action_press("down");
+	elif(facingDirection == 1):
+		Input.action_press("right");
+	elif(facingDirection == 2):
+		Input.action_press("up");
+	else:
+		Input.action_press("left");
+	$PiezoTimer.start(piezoTime);
+
+func _on_PiezoTimer_timeout():
+	Input.action_release("right");
+	Input.action_release("left");
+	Input.action_release("up");
+	Input.action_release("down");
 	
 func _physics_process(delta):
 	direction = Vector2();
@@ -13,7 +51,6 @@ func _physics_process(delta):
 	updateWalkSprites();
 	move_and_slide(direction, Vector2.UP)
 	
-
 func checkForDirections():
 	if(Input.is_action_pressed("right")):
 		direction.x += 1;

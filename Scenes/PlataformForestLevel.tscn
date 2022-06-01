@@ -19,7 +19,7 @@
 [ext_resource path="res://Scenes/PlataformEnemy1.tscn" type="PackedScene" id=17]
 [ext_resource path="res://Scenes/PlataformEnemy2.tscn" type="PackedScene" id=18]
 [ext_resource path="res://Scenes/PlataformEnemy3.tscn" type="PackedScene" id=19]
-[ext_resource path="res://Scenes/NonTrespassingArea.tscn" type="PackedScene" id=20]
+[ext_resource path="res://Scenes/TransitionArea.tscn" type="PackedScene" id=20]
 [ext_resource path="res://Scenes/DeathArea.tscn" type="PackedScene" id=21]
 [ext_resource path="res://Scenes/Spikes.tscn" type="PackedScene" id=22]
 [ext_resource path="res://Scenes/PlataformEnemy4.tscn" type="PackedScene" id=23]
@@ -460,20 +460,6 @@ points = PoolVector2Array( 0, 0, 47.5859, 23.3204, 48, 27.5067, 0, 3.08702 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 3/z_index = 0
-9/name = "oak_woods_tileset.png 9"
-9/texture = ExtResource( 4 )
-9/tex_offset = Vector2( 0, 0 )
-9/modulate = Color( 1, 1, 1, 1 )
-9/region = Rect2( 248, 288, 8, 8 )
-9/tile_mode = 0
-9/occluder_offset = Vector2( 0, 0 )
-9/navigation_offset = Vector2( 0, 0 )
-9/shape_offset = Vector2( 0, 0 )
-9/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-9/shape_one_way = false
-9/shape_one_way_margin = 0.0
-9/shapes = [  ]
-9/z_index = 0
 10/name = "oak_woods_tileset.png 10"
 10/texture = ExtResource( 4 )
 10/tex_offset = Vector2( 0, 0 )
@@ -1069,8 +1055,8 @@ format = 1
 tile_data = PoolIntArray( 1179624, 0, 0, 1179632, 0, 0, 1179640, 0, 0, 1114112, 0, 0, 1114120, 0, 0, 1179674, 6, 0, 1179721, 7, 0, 1245225, 4, 0, 1245243, 4, 0 )
 
 [node name="PlataformPlayer" parent="." instance=ExtResource( 5 )]
-position = Vector2( 3849, 819 )
-startPosition = Vector2( 169, 147 )
+position = Vector2( -73, 148 )
+startPosition = Vector2( -73, 148 )
 
 [node name="BatEnemy1" parent="." instance=ExtResource( 17 )]
 position = Vector2( 230, 119 )
@@ -1078,6 +1064,8 @@ position = Vector2( 230, 119 )
 [node name="SnakeEnemy1" parent="." instance=ExtResource( 18 )]
 position = Vector2( 1090, 233 )
 scale = Vector2( 0.7, 0.7 )
+maxHp = 3
+currentHp = 3
 
 [node name="DogEnemy1" parent="." instance=ExtResource( 19 )]
 position = Vector2( 2157, 508 )
@@ -1087,8 +1075,8 @@ position = Vector2( 3158, 701 )
 
 [node name="Boss" parent="." instance=ExtResource( 23 )]
 position = Vector2( 3700, 801 )
-maxHp = 8
-currentHp = 8
+maxHp = 5
+currentHp = 5
 moveTime = 3.0
 
 [node name="PropsAbovePlayer" type="TileMap" parent="."]
@@ -1101,8 +1089,8 @@ tile_data = PoolIntArray( 1048593, 10, 0, 1114157, 8, 0, 1245213, 3, 0, 1245215,
 tile_set = SubResource( 10 )
 format = 1
 
-[node name="NonTrespassingArea" parent="." instance=ExtResource( 20 )]
-position = Vector2( 0, -88 )
+[node name="TransitionArea" parent="." instance=ExtResource( 20 )]
+position = Vector2( -129, 68 )
 
 [node name="DeathArea" parent="." instance=ExtResource( 21 )]
 position = Vector2( 1313, 407 )

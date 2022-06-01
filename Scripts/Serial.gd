@@ -12,6 +12,7 @@ signal right;
 signal attack;
 signal rightFeet;
 signal leftFeet;
+signal jump;
 
 func _ready():
 	open()
@@ -52,5 +53,7 @@ func on_text_received(text):
 		emit_signal("attack");
 	elif text == "Walk left":
 		emit_signal("leftFeet");
-	else:
+	elif text == "Walk Right":
 		emit_signal("rightFeet");
+	elif text == "Jump":
+		emit_signal("jump");
