@@ -25,16 +25,6 @@ animations = [ {
 "name": "Player_Walk_Right",
 "speed": 8.0
 }, {
-"frames": [ ExtResource( 8 ), ExtResource( 2 ), ExtResource( 7 ), ExtResource( 16 ) ],
-"loop": true,
-"name": "Player_Walk_Left",
-"speed": 8.0
-}, {
-"frames": [ ExtResource( 12 ), ExtResource( 4 ), ExtResource( 10 ), ExtResource( 5 ) ],
-"loop": true,
-"name": "Player_Walk_Down",
-"speed": 8.0
-}, {
 "frames": [ ExtResource( 11 ) ],
 "loop": true,
 "name": "Player_Idle_Right",
@@ -45,11 +35,6 @@ animations = [ {
 "name": "Player_Walk_Up",
 "speed": 8.0
 }, {
-"frames": [ ExtResource( 3 ) ],
-"loop": true,
-"name": "Player_Idle_Up",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 12 ) ],
 "loop": true,
 "name": "Player_Idle_Down",
@@ -59,6 +44,21 @@ animations = [ {
 "loop": true,
 "name": "Player_Idle_Left",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 12 ), ExtResource( 4 ), ExtResource( 10 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "Player_Walk_Down",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "Player_Idle_Up",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 8 ), ExtResource( 2 ), ExtResource( 7 ), ExtResource( 16 ) ],
+"loop": true,
+"name": "Player_Walk_Left",
+"speed": 8.0
 } ]
 
 [sub_resource type="CapsuleShape2D" id=2]

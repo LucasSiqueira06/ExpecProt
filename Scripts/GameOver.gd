@@ -12,6 +12,6 @@ func _ready():
 	Serial.connect("jump", self, "_on_jump");
 
 func _on_continue():
-	get_tree().change_scene("res://Scenes//TopDownMainLevel.tscn")
+	get_tree().change_scene("res://Scenes//PlataformForestLevel.tscn")
 
 

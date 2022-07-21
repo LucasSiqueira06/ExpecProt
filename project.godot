@@ -23,6 +23,7 @@ HudSimpleton="*res://Scripts/HUDSimpleton.gd"
 
 window/size/width=1280
 window/size/height=720
+window/size/fullscreen=true
 window/size/test_width=1280
 window/size/test_height=720
 window/stretch/aspect="keep"

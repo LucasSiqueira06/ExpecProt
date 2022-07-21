@@ -1055,11 +1055,18 @@ format = 1
 tile_data = PoolIntArray( 1179624, 0, 0, 1179632, 0, 0, 1179640, 0, 0, 1114112, 0, 0, 1114120, 0, 0, 1179674, 6, 0, 1179721, 7, 0, 1245225, 4, 0, 1245243, 4, 0 )
 
 [node name="PlataformPlayer" parent="." instance=ExtResource( 5 )]
-position = Vector2( -73, 148 )
-startPosition = Vector2( -73, 148 )
+position = Vector2( 141, 148 )
+startPosition = Vector2( 141, 148 )
+enemiesArray = [ "BatEnemy1", "SnakeEnemy1", "DogEnemy1", "DogEnemy2", "Boss", "BatEnemy2", "BatEnemy3", "DogEnemy3" ]
 
 [node name="BatEnemy1" parent="." instance=ExtResource( 17 )]
 position = Vector2( 230, 119 )
+
+[node name="BatEnemy2" parent="." instance=ExtResource( 17 )]
+position = Vector2( 942, 215 )
+
+[node name="BatEnemy3" parent="." instance=ExtResource( 17 )]
+position = Vector2( 958, 92 )
 
 [node name="SnakeEnemy1" parent="." instance=ExtResource( 18 )]
 position = Vector2( 1090, 233 )
@@ -1069,6 +1076,9 @@ currentHp = 3
 
 [node name="DogEnemy1" parent="." instance=ExtResource( 19 )]
 position = Vector2( 2157, 508 )
+
+[node name="DogEnemy3" parent="." instance=ExtResource( 19 )]
+position = Vector2( 473, 149 )
 
 [node name="DogEnemy2" parent="." instance=ExtResource( 19 )]
 position = Vector2( 3158, 701 )

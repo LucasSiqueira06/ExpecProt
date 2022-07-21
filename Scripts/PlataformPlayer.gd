@@ -8,7 +8,7 @@ export var startPosition = Vector2(0,0);
 export var movementStrength = 0.7;
 export var enemiesArray = ["BatEnemy1", "SnakeEnemy1", "DogEnemy1", "DogEnemy2", "Boss"];
 export var piezoTime = 0.4;
-export var dashDistance = Vector2(3000, 0);
+export var dashDistance = Vector2(3500, 0);
 export var deathTime = 1.2;
 
 var isDead = false;
@@ -24,6 +24,7 @@ var facingRight = true;
 var piezoJump = true;
 
 func _ready():
+	restart_movement();
 	Serial.connect("attack", self, "_on_attack");
 	Serial.connect("leftFeet", self, "_on_left_feet");
 	Serial.connect("rightFeet", self, "_on_right_feet");
@@ -31,6 +32,11 @@ func _ready():
 	Serial.connect("right", self, "_on_right_turn");	
 	Serial.connect("jump", self, "_on_jump");
 	Serial.connect("dash", self, "_on_dash");
+
+func restart_movement():
+	movement.x = 0;
+	movement.y = 0;
+
 
 func _on_dash():
 	if(not is_on_floor() && not dashUsed):
@@ -132,7 +138,7 @@ func updateSprites():
 
 
 func _on_Area2D_body_entered(body):
-	if(contains(body.name)):
+	if(contains(body.name) && not isDead):
 		doDamage();
 		updatePosition(body);
 		checkIfDead();

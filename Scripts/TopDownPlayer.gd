@@ -6,6 +6,7 @@ var facingDirection = 0;
 var piezoTime = 0.5;
 
 func _ready():
+	#restart_movement();
 	Serial.connect("leftFeet", self, "_on_left_feet");
 	Serial.connect("rightFeet", self, "_on_right_feet");
 	Serial.connect("left", self, "_on_left_turn");
